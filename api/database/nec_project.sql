@@ -37,7 +37,7 @@ CREATE TABLE `users` (
   `profile` varchar(200) NOT NULL,
   `gender` varchar(50) NOT NULL,
   `country` varchar(100) NOT NULL,
-  `status` varchar(100) NOT NULL,
+  `status` ENUM('active','Inactive') DEFAULT 'Inactive',
   `created-at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
